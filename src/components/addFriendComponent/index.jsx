@@ -49,7 +49,7 @@ export const AddFriendsComponent = () => {
 
     let dataToAddIfLocalStorageEmpty = [{ ...newUserData, id: 1 }];
 
-    if (allFriends == "empty") {
+    if (allFriends == "empty" || allFriends.length == 0) {
       localStorage.setItem(
         "allFriends",
         JSON.stringify(dataToAddIfLocalStorageEmpty)

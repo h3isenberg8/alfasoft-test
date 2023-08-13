@@ -5,7 +5,7 @@ export const StyledListAllFriendsContainer = styled.div`
   flex-direction: column;
   gap: 30px;
 
-  > div {
+  .friendLists {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -35,5 +35,49 @@ export const StyledListAllFriendsContainer = styled.div`
   > div > img {
     height: 30px;
     border-radius: 50%;
+  }
+
+  .deleteConfirmationModal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .deleteConfirmationBox {
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .deleteConfirmationBox > div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .deleteConfirmationBox > div > span {
+    cursor: pointer;
+  }
+
+  .confirm {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: red;
+  }
+
+  .refuse {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: green;
   }
 `;
