@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { StyledListAllFriendsContainer } from "./styles";
+import { AiOutlineEdit, AiOutlineDelete } from "react-icons/ai";
 
 export const ListAllFriendsComponent = () => {
   const [allFriends, setAllFriends] = useState([]);
@@ -20,8 +21,21 @@ export const ListAllFriendsComponent = () => {
       {allFriends.length !== 0 ? (
         allFriends.map((friend) => (
           <div id={friend.id} key={friend.id}>
-            <img src={friend.picture} alt="" />
-            <span>{friend.name}</span>
+            <div className="nameAndPictureContainer">
+              <img src={friend.picture} alt="" />
+              <span>{friend.name}</span>
+            </div>
+
+            <div className="iconsContainer">
+              <AiOutlineEdit
+                id={friend.id}
+                onClick={(event) => console.log(event.target.id)}
+              />
+              <AiOutlineDelete
+                id={friend.id}
+                onClick={(event) => console.log(event.target.id)}
+              />
+            </div>
           </div>
         ))
       ) : (
