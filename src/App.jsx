@@ -1,13 +1,16 @@
 import { Toaster } from "react-hot-toast";
-import { ManageAndAddFriendsPage } from "./pages/manageAndAddFriendsPage";
-import { ToastContainer, toast } from "react-toastify";
+import { Routes, Route } from "react-router-dom";
+import { ListAllFriendsPage } from "./pages/listAllFriendsPage/listAllFriendsPage";
+import { AddNewFriendsPage } from "./pages/addNewFriendsPages";
 
 function App() {
   return (
     <>
+      <Routes>
+        <Route path="/" element={<ListAllFriendsPage />}></Route>
+        <Route path="/addfriends" element={<AddNewFriendsPage />}></Route>
+      </Routes>
       <Toaster />
-
-      <ManageAndAddFriendsPage />
     </>
   );
 }

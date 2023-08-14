@@ -5,6 +5,29 @@ export const StyledListAllFriendsContainer = styled.div`
   flex-direction: column;
   gap: 30px;
 
+  form {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 70%;
+    justify-content: space-between;
+    width: 70%;
+  }
+
+  .teste {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+  }
+
+  .errorWarning {
+    color: red;
+  }
+
   .friendLists {
     display: flex;
     flex-direction: row;
@@ -79,5 +102,17 @@ export const StyledListAllFriendsContainer = styled.div`
     padding: 10px;
     border-radius: 10px;
     background-color: green;
+  }
+
+  .editModalBackground {
+    background-color: rgb(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
