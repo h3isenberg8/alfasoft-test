@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { StyledListAllFriendsContainer } from "./styles";
 import { AiOutlineEdit, AiOutlineDelete } from "react-icons/ai";
 import { toast } from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const schema = yup.object().shape({
   name: yup
@@ -80,10 +81,12 @@ export const ListAllFriendsComponent = () => {
       {allFriends.length !== 0 ? (
         allFriends.map((friend) => (
           <div className="friendLists" id={friend.id} key={friend.id}>
-            <div className="nameAndPictureContainer">
-              <img src={friend.picture} alt="" />
-              <span>{friend.name}</span>
-            </div>
+            <Link to={`/friend/${friend.id}`}>
+              <div className="nameAndPictureContainer">
+                <img src={friend.picture} alt="" />
+                <span>{friend.name}</span>
+              </div>
+            </Link>
 
             <div className="iconsContainer">
               <AiOutlineEdit
